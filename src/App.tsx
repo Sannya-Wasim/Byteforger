@@ -1,9 +1,10 @@
 import React from 'react';
+import Home from './Screens/Home';
 
 function App() {
   return (
-    <div className="App">
-      <p className='text-4xl text-red font-play mx-auto'>Bytewave Tech</p>
+    <div>
+      <Home/>
     </div>
   );
 }

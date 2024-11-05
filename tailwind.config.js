@@ -8,6 +8,18 @@ module.exports = {
       fontFamily: {
         play: ['"Play"', ...defaultTheme.fontFamily.sans]
       },
+      colors : {
+        black : '#000000',
+        white : '#FFFFFF',
+        darkBlue : '#102C57',
+        lightBlue : '#1679AB',
+        darkPink : '#e44650',
+        lightPink : '#FFB1B1',
+        cream : '#FDFFE2',
+        textGray : '#4A5568',
+        neonPink : '#EA047E',
+        neonBlue : '#2FA4FF'
+      }
     },
   },
   plugins: [],

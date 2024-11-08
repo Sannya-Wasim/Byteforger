@@ -15,10 +15,10 @@ const Home = () => {
       <p className="text-center mb-6 mt-14 text-black text-3xl font-semibold font-play">
         Services we offer
       </p>
-      <div className="flex p-4">
+      <div className="flex p-4 flex-wrap justify-center ">
         {services.map((service: any) => {
           return (
-            <button className="bg-white p-4 m-2 rounded-lg shadow-md flex flex-col justify-center items-center transition ease-out delay-30 hover:-translate-y-3 hover:shadow-lg hover:shadow-lightPink">
+            <button className="lg:w-1/6 w-1/3 bg-white p-4 m-2 rounded-lg shadow-md flex flex-col justify-center items-center transition ease-out delay-30 hover:-translate-y-3 hover:shadow-lg hover:shadow-lightPink">
               <div className="my-2">{<service.image />}</div>
               <p className="font-semibold font-play text-center my-2 text-lg text-darkBlue">
                 {service.title}
@@ -37,9 +37,9 @@ const Home = () => {
       <div>
         {case_studies.map((item: any) => {
           return (
-            <div className="flex flex-row justify-center items-center pr-4  mx-36 mb-2 rounded-lg shadow-md">
+            <div className="lg:flex lg:flex-row justify-center items-center pr-4  mx-36 mb-2 rounded-lg shadow-md">
               <div>{<item.image />}</div>
-              <div className="mx-4 ">
+              <div className="m-4">
                 <p className="text-xl text-darkBlue font-bold mb-4 font-play text-pretty">
                   {item.title}
                 </p>
@@ -76,68 +76,6 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <p className="text-center mb-12 mt-20 text-xl font-play">
-        Way of building <br />{" "}
-        <span className="text-3xl font-semibold">Great Software</span>
-      </p>
-      <div className="mt-20 mx-4 ">
-        {ways.map((item: any, index: number) => (
-          <div
-            key={index}
-            className={`flex flex-col md:flex-row justify-center items-center my-14 ${
-              index % 2 !== 0 ? "md:flex-row-reverse" : ""
-            }`}
-          >
-            {/* Text Section */}
-            <div className="w-full md:w-1/2 px-10 my-6">
-              <p className="font-play font-bold text-2xl text-darkBlue mb-2">
-                {item.title}
-              </p>
-              <p className="font-thin mb-6">{item.desc}</p>
-              <p className="border-l-4 border-darkPink px-2 italic text-darkPink font-thin">
-                {item.quote}
-              </p>
-              <div className="flex flex-row justify-start items-center my-6">
-                {<item.profileIcon />}
-                <div className="mx-2 font-thin">
-                  <p className="text-sm">{item.profileName}</p>
-                  <p className="text-sm">{item.profileTitle}</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Image Section */}
-            <item.image className="w-full md:w-2/5 h-1/5 px-10" />
-          </div>
-        ))}
-      </div>
-      <p className="text-center mb-12 mt-20 text-xl font-play">
-        Our <br /> <span className="text-3xl font-semibold">Techstack</span>
-      </p>
-      <div className="flex flex-row justify-evenly items-center mx-44 ">
-        {icons.map((icon: any) => {
-          return (
-            <button
-              onClick={() => {
-                setStacks(icon.items);
-                setSelectedIcon(icon.name);
-              }}
-              className={`font-semibold my-4 text-lg text-${
-                selectedIcon === icon.name ? "darkPink" : "darkBlue"
-              } 
-              `}
-            >
-              {icon.name}
-            </button>
-          );
-        })}
-      </div>
-      <div className="flex flex-row justify-evenly items-center my-16">
-        {stacks.map((StackIcon: any) => {
-          return <StackIcon className="w-36 h-36 py-auto" />;
-        })}
-      </div>
-      <Footer/>
     </div>
   );
 };

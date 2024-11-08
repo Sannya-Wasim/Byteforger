@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/static/css/main.32e67e56.css",
+    "main.js": "/static/js/main.481c7253.js",
+    "static/js/453.c500d10d.chunk.js": "/static/js/453.c500d10d.chunk.js",
+    "static/media/WebIcon.svg": "/static/media/WebIcon.2fd973048c21ec6f12d1194223f06b89.svg",
+    "static/media/DummyImage01.svg": "/static/media/DummyImage01.fdf2cbe3c80876e367461a284b085769.svg",
+    "static/media/CaseStudy.svg": "/static/media/CaseStudy.43319834be2151a22031c42ceacebce3.svg",
+    "static/media/ProfileIcon.svg": "/static/media/ProfileIcon.7f8061b73f05d23a2e1ba08cad6f0fab.svg",
+    "static/media/jenkins-svgrepo-com.svg": "/static/media/jenkins-svgrepo-com.6372ba9be08ac53a61ba8cd8a927a4d4.svg",
+    "static/media/mongodb-icon-2.svg": "/static/media/mongodb-icon-2.71878b738f870a417c999759fb2368a8.svg",
+    "static/media/Group.svg": "/static/media/Group.d9eb24cb27ee20ebe3cf4faf8831fb42.svg",
+    "static/media/mysql-3.svg": "/static/media/mysql-3.5ed4a5dd3156991212575952fdf1f366.svg",
+    "static/media/nodejs-1.svg": "/static/media/nodejs-1.52cbf9a89f44655c0375b9e9f88bf9c5.svg",
+    "static/media/postgresql.svg": "/static/media/postgresql.ae92b576b8ea41666538c0756df27969.svg",
+    "static/media/microsoft-azure-2.svg": "/static/media/microsoft-azure-2.688c1f893d8d66ae4b31f8cc9afddfee.svg",
+    "static/media/kubernetes-svgrepo-com.svg": "/static/media/kubernetes-svgrepo-com.2649cae29b6f4bb3a552aee856251662.svg",
+    "static/media/selenium-svgrepo-com.svg": "/static/media/selenium-svgrepo-com.fb23c33b0df5583d1aba651fb21a7106.svg",
+    "static/media/docker-1-logo-svgrepo-com.svg": "/static/media/docker-1-logo-svgrepo-com.ada937f86e1cef2bd8ade00f46ce4eae.svg",
+    "static/media/sass-1.svg": "/static/media/sass-1.8aa78a8393470431c8036541f0708bd7.svg",
+    "static/media/expressjs-ar21.svg": "/static/media/expressjs-ar21.493a0dd08d8d77a341e2d22676607a29.svg",
+    "static/media/aws-2.svg": "/static/media/aws-2.1baaa078f947505c36dc8ee7595f91da.svg",
+    "static/media/react-2.svg": "/static/media/react-2.e68b35f4774979ae220b1d5d7b345b00.svg",
+    "static/media/firebase-1.svg": "/static/media/firebase-1.e6583a29712875c8977afcba1d0b6883.svg",
+    "static/media/django-community.svg": "/static/media/django-community.17054aee9ade418b4b378c7b9e99cf11.svg",
+    "static/media/rails-1.svg": "/static/media/rails-1.05656c97e3e19a518d8d8543ab0b3896.svg",
+    "static/media/github-142-svgrepo-com.svg": "/static/media/github-142-svgrepo-com.5531be85d7a8d6f333e5c7136944a022.svg",
+    "static/media/google-cloud-1.svg": "/static/media/google-cloud-1.e929444adcd04c02cd95f8e693a92db4.svg",
+    "static/media/browserstack.svg": "/static/media/browserstack.49246ed215ffd550384d1fc8a89a2605.svg",
+    "index.html": "/index.html",
+    "static/media/terraform-icon-svgrepo-com.svg": "/static/media/terraform-icon-svgrepo-com.a2330b8d96c9f9b8c3457335ca5469f9.svg",
+    "static/media/tailwind-css-2.svg": "/static/media/tailwind-css-2.315d0ac2a2708d5f06972906113dfbf1.svg",
+    "static/media/angular-icon-1.svg": "/static/media/angular-icon-1.28ae4f3c6c193d04113e4767a73b86bc.svg",
+    "static/media/vue-9.svg": "/static/media/vue-9.f04dfe30a8ad8eb5c4e01aaf1163cb53.svg",
+    "main.32e67e56.css.map": "/static/css/main.32e67e56.css.map",
+    "main.481c7253.js.map": "/static/js/main.481c7253.js.map",
+    "453.c500d10d.chunk.js.map": "/static/js/453.c500d10d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.32e67e56.css",
+    "static/js/main.481c7253.js"
+  ]
+}

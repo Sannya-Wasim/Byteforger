@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <div className="flex justify-between items-center px-4 py-2">
       {/* Logo */}
-      <img src={logo} className="lg:w-1/5 m-4 w-1/3" />
+      <img src={logo} className="lg:w-1/5 m-4 w-1/3" alt="logo is absent" />
 
       {/* Desktop Navigation */}
       <div className="hidden md:flex md:flex-row items-center lg:text-xl md:text-md text-sm">

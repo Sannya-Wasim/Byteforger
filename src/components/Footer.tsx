@@ -13,7 +13,7 @@ const Footer = () => {
       <div className="flex flex-row justify-start items-start p-6">
         {/* 1 */}
         <div className="w-2/5 px-6">
-          <img src={logo} className="w-64 h-18" />
+          <img src={logo} className="w-64 h-18" alt="img is absent"/>
           <p className="text-textGray my-4">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry.{" "}

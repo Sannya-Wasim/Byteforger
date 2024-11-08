@@ -1,6 +1,7 @@
 {
   "name": "bytewave_tech",
   "version": "0.1.0",
+  "homepage": "https://sannya-wasim.github.io/Byteforger",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",

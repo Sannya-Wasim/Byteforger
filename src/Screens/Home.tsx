@@ -42,11 +42,18 @@ const Home = () => {
         {case_studies.map((item: any, index: number) => {
           return (
             <div
-              key={index} // Adding a unique key for each item
-              className="flex flex-col lg:flex-row justify-center items-center lg:pr-4 px-4 lg:mx-36 my-4 rounded-lg shadow-md"
+              key={index}
+              className="flex flex-col lg:flex-row justify-center items-stretch lg:pr-4 px-4 lg:mx-36 my-4 rounded-lg shadow-md"
             >
-              <div className="mb-4 lg:mb-0 lg:mr-4">{<item.image />}</div>
-              <div className="m-4 text-center lg:text-left">
+              {/* Image Container */}
+              <div className="flex-1 flex items-center justify-center mb-4 lg:mb-0 lg:mr-4">
+                {
+                  <item.image className="w-full h-full object-cover rounded-lg" />
+                }
+              </div>
+
+              {/* Text Content */}
+              <div className="flex-1 w-full m-4 text-start lg:text-left">
                 <p className="text-xl font-bold mb-4 font-play text-darkBlue">
                   {item.title}
                 </p>

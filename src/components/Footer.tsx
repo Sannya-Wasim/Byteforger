@@ -9,62 +9,47 @@ const icons = [Facebook, Instagram, Twitter, Linkedin];
 
 const Footer = () => {
   return (
-    <div className="shadow-inner mt-36 ">
-      <div className="flex flex-row justify-start items-start p-6">
+    <div className="shadow-inner mt-36 p-4 md:p-6 lg:px-8">
+      <div className="flex flex-col lg:flex-row justify-start items-start lg:items-center lg:space-x-10 lg:space-y-0 space-y-6">
         {/* 1 */}
-        <div className="w-2/5 px-6">
-          <img src={logo} className="w-64 h-18" alt="img is absent"/>
-          <p className="text-textGray my-4">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.{" "}
+        <div className="lg:w-2/5 w-full px-4 md:px-6 lg:px-0">
+          <img src={logo} className="w-32 h-12 md:w-48 md:h-16 lg:w-64 lg:h-18" alt="img is absent" />
+          <p className="text-textGray my-4 text-sm md:text-base">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </p>
-          <div className="flex flex-row justify-start items-center">
-            {icons.map((Item: any) => {
-              return (
-                <div className="p-3 m-2 shadow-xl rounded-full items-center">
-                  <Item className="w-4 h-4" />
-                </div>
-              );
-            })}
+          <div className="flex flex-row justify-start items-center space-x-4">
+            {icons.map((Item, index) => (
+              <div key={index} className="p-3 shadow-xl rounded-full items-center bg-gray-100 hover:bg-darkBlue hover:text-white">
+                <Item className="w-4 h-4" />
+              </div>
+            ))}
           </div>
         </div>
         {/* 2 */}
-        <div className="flex flex-col justify-start items-start w-1/5">
-          <p className="font-bold font-play text-xl text-darkBlue my-2">
+        <div className="flex flex-col justify-start items-start w-full md:w-1/2 lg:w-1/5">
+          <p className="font-bold font-play text-lg lg:text-xl text-darkBlue my-2">
             Links
           </p>
-          <button className="text-textGray hover:text-darkPink my-1">
-            About Us
-          </button>
-          <button className="text-textGray hover:text-darkPink my-1">
-            Services
-          </button>
-          <button className="text-textGray hover:text-darkPink my-1">
-            Case Studies
-          </button>
-          <button className="text-textGray hover:text-darkPink my-1">
-            How it works
-          </button>
-          <button className="text-textGray hover:text-darkPink my-1">
-            Blog
-          </button>
-          <button className="text-textGray hover:text-darkPink my-1">
-            Careers
-          </button>
+          {['About Us', 'Services', 'Case Studies', 'How it works', 'Blog', 'Careers'].map((link, index) => (
+            <button key={index} className="text-textGray hover:text-darkPink my-1 text-sm md:text-base">
+              {link}
+            </button>
+          ))}
         </div>
         {/* 3 */}
-        <div className="w-2/5">
-          <p className="font-bold font-play text-xl text-darkBlue my-2">
+        <div className="w-full md:w-1/2 lg:w-2/5">
+          <p className="font-bold font-play text-lg lg:text-xl text-darkBlue my-2">
             Contact Us
           </p>
-          <p className="text-textGray my-4">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.{" "}
+          <p className="text-textGray my-4 text-sm md:text-base">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </p>
-          <p className="text-textGray">+921234567890</p>
+          <p className="text-textGray text-sm md:text-base">+921234567890</p>
         </div>
       </div>
-        <p className="text-center text-textGray p-4 mt-4">© 2023 Copyright by IK Developers. All rights reserved.</p>
+      <p className="text-center text-textGray text-xs md:text-sm p-4 mt-4">
+        © 2023 Copyright by IK Developers. All rights reserved.
+      </p>
     </div>
   );
 };

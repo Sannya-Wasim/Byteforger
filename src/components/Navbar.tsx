@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import logo from "../assets/images/logo.png";
-import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai"; // Import close icon for mobile
+import { AiOutlineMenu } from "react-icons/ai";
+
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -12,9 +13,9 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="flex justify-between items-center px-4 py-2 bg-white shadow-md ">
+    <div className="flex justify-between items-center p-4 bg-white  lg:absolute lg:z-10 lg:top-0 lg:right-0 lg:left-0">
       {/* Logo */}
-      <img src={logo} className="lg:w-1/5 m-4 w-1/3" alt="logo is absent" />
+      <button className="w-2/5 md:w-1/4 lg:w-1/6 md:m-2 "><img src={logo}  alt="logo is absent" /></button>
 
       {/* Desktop Navigation */}
       <div className="hidden md:flex md:flex-row items-center lg:text-xl md:text-md text-sm">

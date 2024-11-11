@@ -1,10 +1,12 @@
 import React from "react";
 import { ReactComponent as HeroImage } from "../assets/svgs/heroImage.svg";
+import Lottie from "lottie-react";
+import HeroJSON from "../assets/json/Hero.json";
 
 const Hero = () => {
   return (
-    <div className="p-4 flex flex-row justify-evenly mt-10">
-      <div className="flex flex-col justify-center px-8 lg:w-2/5">
+    <div className="p-4 flex flex-row justify-between">
+      <div className="flex flex-col justify-center px-8 ">
         <p className="text-5xl text-darkBlue font-play font-400 my-6">
           Great <span className="text-darkPink">Product</span> is built by great
           teams.
@@ -17,15 +19,18 @@ const Hero = () => {
           Let's get started!
         </button>
       </div>
-      {/* <div className=''><HeroImage/></div> */}
-      <video
+      <div className="hidden lg:block lg:-mt-10 lg:w-3/4 ">
+        <Lottie animationData={HeroJSON} loop={true} className="" />
+      </div>
+      {/* <div className='hidden lg:block'><HeroImage/></div> */}
+      {/* <video
       className="hidden lg:w-2/5 lg:block"
         autoPlay
         loop
         muted
         playsInline
         src="https://gojilabs.com/wp-content/uploads/2024/09/New_Hero_1.5.mp4"
-      ></video>
+      ></video> */}
     </div>
   );
 };

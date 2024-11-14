@@ -1,13 +1,31 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import { approaches, case_studies, icons, services, ways } from "../constants";
 import Footer from "../components/Footer";
 import { useIsVisible } from "../hooks/useIsVisible";
+import { useSelector } from "react-redux";
+import { RootState } from "../store";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const Home = () => {
   const [stacks, setStacks] = useState(icons[0].items);
   const [selectedIcon, setSelectedIcon] = useState(icons[0].name);
+  const searchTerm = useSelector((state: RootState) => state.search.value);
+
+  const highlightText = (text: string, term: string) => {
+    if (!term) return text;
+    const regex = new RegExp(`(${term})`, "gi");
+    return (
+      <span
+        dangerouslySetInnerHTML={{
+          __html: text.replace(regex, "<mark>$1</mark>"),
+        }}
+      />
+    );
+  };
+
   const ref1 = useRef<HTMLDivElement | null>(null);
   const visible1 = useIsVisible(ref1);
   const ref2 = useRef<HTMLDivElement | null>(null);
@@ -16,6 +34,24 @@ const Home = () => {
   const visible3 = useIsVisible(ref3);
   const ref4 = useRef<HTMLDivElement | null>(null);
   const visible4 = useIsVisible(ref4);
+
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 4,
+      slidesToSlide: 2, // optional, default to 1.
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 3,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+  };
   return (
     <div className="">
       <Navbar />
@@ -27,34 +63,87 @@ const Home = () => {
           visible1 ? "opacity-100" : "opacity-0"
         }`}
       >
-        <p
-          className={`text-center mb-6 mt-14 text-black text-3xl font-semibold font-play`}
+      <p
+        id="services"
+        className={`text-center mb-6 mt-14 text-black text-3xl font-semibold font-play`}
+      >
+        {highlightText("Services Catalog", searchTerm)}
+      </p>
+      {/* <div className="flex p-4 flex-wrap justify-center"> */}
+        <Carousel
+          swipeable={true}
+          draggable={true}
+          showDots={false}
+          responsive={responsive}
+          ssr={true} // means to render carousel on server-side.
+          infinite={true}
+          keyBoardControl={true}
+          customTransition=" transform 800ms ease-in-out"
+          transitionDuration={800}
+          containerClass="carousel-container "
+          removeArrowOnDeviceType={["tablet", "mobile"]}
+          // deviceType={this.props.deviceType}
+          // itemClass="carousel-item-padding-40-px"
+          // className="border-2"
         >
-          Services we offer
-        </p>
-        <div className="flex p-4 flex-wrap justify-center">
           {services.map((service: any) => {
             return (
               <button
                 key={service.id} // Add a unique key for each item
-                className="lg:w-1/6 md:w-1/4 sm:w-1/2 w-full bg-white p-4 m-2 rounded-lg shadow-md flex flex-col justify-center items-center transition ease-out duration-300 hover:-translate-y-3 hover:shadow-lg hover:shadow-lightPink"
+                className="md:h-[65vh] lg:h-[50vh] bg-white p-4 m-2 rounded-lg shadow-md flex flex-col  items-center transition ease-out duration-300"
               >
                 <div className="my-2">{<service.image />}</div>
                 <p className="font-semibold font-play text-center my-2 text-lg text-darkBlue">
-                  {service.title}
+                  {highlightText(service.title, searchTerm)}
                 </p>
-                <p className="text-pretty mb-2 text-sm text-textGray">
-                  {service.desc}
+                <p className="text-balance mb-2 text-sm text-textGray">
+                  {highlightText(service.desc, searchTerm)}
                 </p>
               </button>
             );
           })}
+        </Carousel>
+
+        {/* </div> */}
+      </div>
+      {/* Workflow and Methodology */}
+      <div className="bg-darkBlue mt-10">
+        <p
+          id="methodology"
+          className="text-center text-white mb-8 pt-8 text-2xl font-play "
+        >
+          Workflow and <br />{" "}
+          <span className="text-4xl font-semibold text-neonPink">
+            Methodology
+          </span>
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2  p-4">
+          {approaches.map((item: any, index: number) => (
+            <div
+              key={index}
+              className={`border-[1px] border-lightBlue p-4 m-2 flex flex-row justify-between items-center transition-opacity ease-in duration-700 ${
+                visible3 ? "opacity-100" : "opacity-0"
+              }`}
+              ref={ref3}
+            >
+              <div className="mx-2">{<item.image />}</div>
+              <div className="mx-2">
+                <p className="text-lg font-bold font-play text-neonBlue">
+                  {item.title}
+                </p>
+                <p className="text-cream font-thin">{item.desc}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-      {/* Recent Case Studies */}
-      <p className="text-center mb-12 mt-20 text-xl font-play">
-        Our recent <br />{" "}
-        <span className="text-3xl font-semibold">Case Studies</span>
+      {/* Solutions in Action */}
+      <p
+        id="achievements"
+        className="text-center mb-12 mt-20 text-xl font-play"
+      >
+        Solutions <br />{" "}
+        <span className="text-3xl font-semibold">in Action</span>
       </p>
       <div
         ref={ref2}
@@ -89,34 +178,7 @@ const Home = () => {
           );
         })}
       </div>
-      {/* Design and Development Approach */}
-      <div className="bg-darkBlue mt-10">
-        <p className="text-center text-white mb-8 pt-8 text-2xl font-play ">
-          Our design and <br />{" "}
-          <span className="text-4xl font-semibold text-neonPink">
-            development approach
-          </span>
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2  p-4">
-          {approaches.map((item: any, index: number) => (
-            <div
-              key={index}
-              className={`border-[1px] border-lightBlue p-4 m-2 flex flex-row justify-between items-center transition-opacity ease-in duration-700 ${
-                visible3 ? "opacity-100" : "opacity-0"
-              }`}
-              ref={ref3}
-            >
-              <div className="mx-2">{<item.image />}</div>
-              <div className="mx-2">
-                <p className="text-lg font-bold font-play text-neonBlue">
-                  {item.title}
-                </p>
-                <p className="text-cream font-thin">{item.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+      {/* Ways of building great software */}
       <p className="text-center mb-12 mt-20 text-xl font-play">
         Way of building <br />{" "}
         <span className="text-3xl font-semibold">Great Software</span>

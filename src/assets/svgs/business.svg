@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" id="sales">
+  <g stroke="#373449">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" d="M6.5 4.5h20.01c1.109 0 2 .892 2 2v15c0 1.108-.891 2-2 2h-2.49l-.026 3.5-3.996-3.5H6.5c-1.108 0-2-.892-2-2v-15c0-1.108.892-2 2-2z"></path>
+    <path fill="#00d1b6" stroke-linejoin="round" d="M8.486 21.033v-5.502h2v5.502"></path>
+    <path fill="none" stroke-linejoin="round" d="M10.497 21.033v-2.502h2v2.502"></path>
+    <path fill="#ff5a67" stroke-linejoin="round" d="M12.508 21.033v-7.541h2v7.541"></path>
+    <path fill="none" stroke-linejoin="round" d="M14.494 21.033v-5.502h2v5.502"></path>
+    <path fill="#00d1b6" stroke-linejoin="round" d="M16.503 21.033v-9.53h2l-.023 9.53"></path>
+    <path fill="none" stroke-linejoin="round" d="M18.494 21.033v-5.502h2v5.502"></path>
+    <path fill="#00d1b6" stroke-linejoin="round" d="M20.503 21.033v-2.518H22.5v2.518"></path>
+    <path fill="#ff5a67" stroke-linejoin="round" d="M22.507 21V7.518h1.989V21"></path>
+    <path fill="none" d="M18.182 6.842a8.813 6.469-18.637 0 1-10.136 4.08"></path>
+    <path fill="none" stroke-linejoin="round" d="M15.994 6.514h2.5v2.5"></path>
+  </g>
+</svg>

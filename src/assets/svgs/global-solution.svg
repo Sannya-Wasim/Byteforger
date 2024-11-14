@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="idea-optimization">
+  <g>
+    <path fill="#00d7df" d="M60.63,40.98a29.868,29.868,0,0,1-2.04,4.91,9.978,9.978,0,0,0-12.7,12.7,29.868,29.868,0,0,1-4.91,2.04,9.977,9.977,0,0,0-17.96,0,29.868,29.868,0,0,1-4.91-2.04,9.978,9.978,0,0,0-12.7-12.7,29.868,29.868,0,0,1-2.04-4.91A9.985,9.985,0,0,0,9,32a9.985,9.985,0,0,0-5.63-8.98,29.868,29.868,0,0,1,2.04-4.91,9.978,9.978,0,0,0,12.7-12.7,29.868,29.868,0,0,1,4.91-2.04A9.985,9.985,0,0,0,32,9a9.985,9.985,0,0,0,8.98-5.63,29.868,29.868,0,0,1,4.91,2.04,9.978,9.978,0,0,0,12.7,12.7,29.868,29.868,0,0,1,2.04,4.91,9.977,9.977,0,0,0,0,17.96Z"></path>
+    <circle cx="32" cy="32" r="16" fill="#91dc5a"></circle>
+    <path fill="#ff5023" d="M34,35.65V39a2,2,0,0,1-2,2h0a2,2,0,0,1-2-2V35.65Z"></path>
+    <path fill="#ffda44" d="M34,37.65a5.889,5.889,0,0,1-4,0,6,6,0,1,1,4,0Z"></path>
+    <rect width="2" height="2" x="31" y="22" fill="#fff"></rect>
+    <rect width="2" height="2" x="26.5" y="23.206" fill="#fff" transform="rotate(-30.002 27.5 24.206)"></rect>
+    <rect width="2" height="2" x="23.206" y="26.5" fill="#fff" transform="rotate(-59.998 24.206 27.5)"></rect>
+    <rect width="2" height="2" x="22" y="31" fill="#fff"></rect>
+    <rect width="2" height="2" x="23.206" y="35.5" fill="#fff" transform="rotate(-29.995 24.205 36.5)"></rect>
+    <rect width="2" height="2" x="38.794" y="35.5" fill="#fff" transform="rotate(-59.998 39.794 36.5)"></rect>
+    <rect width="2" height="2" x="40" y="31" fill="#fff"></rect>
+    <rect width="2" height="2" x="38.794" y="26.5" fill="#fff" transform="rotate(-29.995 39.794 27.5)"></rect>
+    <rect width="2" height="2" x="35.5" y="23.206" fill="#fff" transform="rotate(-60.005 36.5 24.206)"></rect>
+    <ellipse cx="30" cy="30" fill="#fff" rx="2" ry="1" transform="rotate(-45 30 30)"></ellipse>
+  </g>
+</svg>

@@ -92,7 +92,7 @@ const Home = () => {
                 key={service.id} // Add a unique key for each item
                 className="md:h-[65vh] lg:h-[50vh] bg-white p-4 m-2 rounded-lg shadow-md flex flex-col  items-center transition ease-out duration-300"
               >
-                <div className="my-2">{<service.image />}</div>
+                <div className="my-2 w-8 h-8">{<service.image />}</div>
                 <p className="font-semibold font-play text-center my-2 text-lg text-darkBlue">
                   {highlightText(service.title, searchTerm)}
                 </p>

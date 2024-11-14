@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="design">
+  <linearGradient id="a" x1="4" x2="9.539" y1="14.231" y2="14.231" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#ffc80b"></stop>
+    <stop offset="1" stop-color="#e89318"></stop>
+  </linearGradient>
+  <circle cx="6.8" cy="14.2" r="2.8" fill="url(#a)"></circle>
+  <linearGradient id="b" x1="10.461" x2="16" y1="7.769" y2="7.769" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#59d672"></stop>
+    <stop offset="1" stop-color="#46a56f"></stop>
+  </linearGradient>
+  <path fill="url(#b)" d="M15.5 10.5H11c-.3 0-.5-.2-.5-.5V5.5c0-.3.2-.5.5-.5h4.5c.3 0 .5.2.5.5V10c0 .3-.2.5-.5.5z"></path>
+  <linearGradient id="c" x1="10.461" x2="16" y1="14.231" y2="14.231" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#ff5640"></stop>
+    <stop offset="1" stop-color="#cc3737"></stop>
+  </linearGradient>
+  <path fill="url(#c)" d="M15.5 17c-.1 0-.2 0-.3-.1l-4.6-4.6c-.2-.2-.2-.5 0-.7s.5-.2.7 0l4.6 4.6c.2.2.2.5 0 .7-.1.1-.2.1-.4.1z"></path>
+  <linearGradient id="d" x1="10.461" x2="16" y1="14.231" y2="14.231" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#ff5640"></stop>
+    <stop offset="1" stop-color="#cc3737"></stop>
+  </linearGradient>
+  <path fill="url(#d)" d="M10.9 17c.1 0 .2 0 .3-.1l4.6-4.6c.2-.2.2-.5 0-.7-.2-.2-.5-.2-.7 0l-4.6 4.6c-.2.2-.2.5 0 .7.2.1.3.1.4.1z"></path>
+  <linearGradient id="e" x1="4" x2="9.539" y1="7.769" y2="7.769" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#708afb"></stop>
+    <stop offset="1" stop-color="#426de8"></stop>
+  </linearGradient>
+  <path fill="url(#e)" d="M9.1 10.5H4.5c-.3 0-.6-.3-.4-.6l2.3-4.6c.2-.3.7-.3.8 0l2.3 4.6c.1.3-.1.6-.4.6z"></path>
+</svg>

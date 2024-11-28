@@ -4,23 +4,18 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import { globalSearch } from "../redux/slices/searchSlice";
 import { RootState } from "../store";
+import { links } from "../constants";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const dispatch = useDispatch()
-  const searchTerm = useSelector((state:RootState) => state.search.value)
-  const navItems = [
-    { id: 1, text: "About Us", section : '#aboutus' },
-    { id: 2, text: "Services", section : '#services' },
-    { id: 3, text: "Achievements", section : '#achievements' },
-    { id: 4, text: "How it works", section : "#methodology" },
-  ];
+  // const searchTerm = useSelector((state:RootState) => state.search.value)
 
-  const handleSearch = (e: any) => {
-    // setSearch(e.target.value);
-    dispatch(globalSearch(e.target.value))
-    // console.log("Search value", search);
-  };
+  // const handleSearch = (e: any) => {
+  //   // setSearch(e.target.value);
+  //   dispatch(globalSearch(e.target.value))
+  //   // console.log("Search value", search);
+  // };
 
   return (
     <div className="flex justify-between items-center p-4 bg-white  lg:absolute lg:z-10 lg:top-0 lg:right-0 lg:left-0">
@@ -31,7 +26,7 @@ const Navbar = () => {
 
       {/* Desktop Navigation */}
       <div className="hidden md:flex md:flex-row items-center lg:text-xl md:text-md text-sm">
-        {navItems.map((item) => (
+        {links.map((item) => (
           <a
             key={item.id}
             className="text-center mx-4 text-black font-play hover:text-lightBlue"
@@ -40,12 +35,12 @@ const Navbar = () => {
             {item.text}
           </a>
         ))}
-        <input
+        {/* <input
           value={searchTerm}
           placeholder="Search for keywords..."
           onChange={handleSearch}
           className="hidden md:block bg-lightGray py-2 px-4 text-sm rounded-3xl text-black"
-        />
+        /> */}
         <a href="#contact" className="md:text-md text-sm bg-darkBlue text-cream rounded-3xl py-2 px-4 mx-2 font-play transition duration-300 ease-in-out transform hover:bg-lightBlue hover:-translate-y-1">
           Contact Us
         </a>
@@ -65,7 +60,7 @@ const Navbar = () => {
           nav ? "translate-x-0" : "translate-x-full"
         } fixed inset-0 bg-white z-40 flex flex-col items-center justify-center transition-transform duration-300 ease-in-out md:hidden`}
       >
-        {navItems.map((item) => (
+        {links.map((item) => (
           <button
             key={item.id}
             className="my-4 text-center text-lg text-black font-play hover:text-lightBlue"

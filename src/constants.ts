@@ -43,6 +43,17 @@ import { ReactComponent as DesignIcon } from "./assets/svgs/design.svg";
 import { ReactComponent as TestingIcon } from "./assets/svgs/gears.svg";
 import { ReactComponent as RapidIcon } from "./assets/svgs/lightning.svg";
 import { ReactComponent as SalesIcon } from "./assets/svgs/business.svg";
+import CleaningBeeImage from './assets/images/The Cleaning Bee-Profile_Image.jpg'
+import QPayImage from './assets/images/QPay_Design.png'
+import DrivewaveImage from './assets/images/Drivewave_Design.jpg'
+
+export const links = [
+  { id: 1, text: "About Us", section : '/' },
+  { id: 2, text: "Services", section : '#services' },
+  { id: 3, text: "Achievements", section : '#achievements' },
+  { id: 4, text: "How it works", section : "#methodology" },
+];
+
 export const services = [
   {
     title: "Software Development & Modernization",
@@ -88,19 +99,19 @@ export const services = [
 
 export const case_studies = [
   {
-    title: "Website Design for SCFC Canada",
-    image: CaseStudy,
-    desc: "Born out of a vision, a single-minded objective that puts service before anything else, Swift Clearance and Forwarding Corp. surging forth to deliver the best services in the shipping and logistics scenario. Its meteoric rise stems out of a solid foundation. The management boasts of over 20 years of rich and varied experience in the shipping and freight forwarding industry.",
+    title: "DriveWave - Smarter Communication on Roads",
+    image: DrivewaveImage,
+    desc: 'DriveWave revolutionizes road communication with its Bluetooth-enabled app and LED display system. Drivers can instantly share messages like "Keep Distance" or "Pothole Ahead" on a rear-mounted LED screen, ensuring real-time updates and improved safety. Designed for ease and minimal distraction, DriveWave keeps drivers connected and informed for a safer driving experience.',
   },
   {
-    title: "Website Design for SCFC Canada",
-    image: CaseStudy,
-    desc: "Born out of a vision, a single-minded objective that puts service before anything else, Swift Clearance and Forwarding Corp. surging forth to deliver the best services in the shipping and logistics scenario. Its meteoric rise stems out of a solid foundation. The management boasts of over 20 years of rich and varied experience in the shipping and freight forwarding industry.",
+    title: "The Cleaning Bee - Acleaning services app!",
+    image: CleaningBeeImage,
+    desc: "The Cleaning Bee app transforms home cleaning with easy booking for professional maid services. Prioritizing user convenience, it offers options for one-time or recurring cleanings, thorough vetting for trusted professionals, and real-time updates. With seamless scheduling and tracking, The Cleaning Bee ensures a spotless home with minimal effort.",
   },
   {
-    title: "Website Design for SCFC Canada",
-    image: CaseStudy,
-    desc: "Born out of a vision, a single-minded objective that puts service before anything else, Swift Clearance and Forwarding Corp. surging forth to deliver the best services in the shipping and logistics scenario. Its meteoric rise stems out of a solid foundation. The management boasts of over 20 years of rich and varied experience in the shipping and freight forwarding industry.",
+    title: "QPay - QR code your payments in a stitch!",
+    image: QPayImage,
+    desc: "QPay is a cutting-edge mobile app that simplifies payments through QR code scanning. With a quick scan, users can securely and instantly complete transactions anytime, anywhere. Designed for convenience and efficiency, QPay eliminates the hassle of traditional payment methods, offering a seamless way to manage your payments with just a single tap.",
   },
 ];
 

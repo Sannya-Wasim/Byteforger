@@ -12,19 +12,37 @@ import "react-multi-carousel/lib/styles.css";
 const Home = () => {
   const [stacks, setStacks] = useState(icons[0].items);
   const [selectedIcon, setSelectedIcon] = useState(icons[0].name);
+  const [showButton, setShowButton] = useState(false);
   const searchTerm = useSelector((state: RootState) => state.search.value);
 
-  const highlightText = (text: string, term: string) => {
-    if (!term) return text;
-    const regex = new RegExp(`(${term})`, "gi");
-    return (
-      <span
-        dangerouslySetInnerHTML={{
-          __html: text.replace(regex, "<mark>$1</mark>"),
-        }}
-      />
-    );
+  const handleScroll = () => {
+    if (
+      document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20
+    ) {
+      setShowButton(true);
+    } else {
+      setShowButton(false);
+    }
   };
+
+  const backToTop = () => {
+    document.documentElement.style.scrollBehavior = "smooth";
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  };
+
+  // const highlightText = (text: string, term: string) => {
+  //   if (!term) return text;
+  //   const regex = new RegExp(`(${term})`, "gi");
+  //   return (
+  //     <span
+  //       dangerouslySetInnerHTML={{
+  //         __html: text.replace(regex, "<mark>$1</mark>"),
+  //       }}
+  //     />
+  //   );
+  // };
 
   const ref1 = useRef<HTMLDivElement | null>(null);
   const visible1 = useIsVisible(ref1);
@@ -52,6 +70,13 @@ const Home = () => {
       slidesToSlide: 1, // optional, default to 1.
     },
   };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <div className="">
       <Navbar />
@@ -63,13 +88,13 @@ const Home = () => {
           visible1 ? "opacity-100" : "opacity-0"
         }`}
       >
-      <p
-        id="services"
-        className={`text-center mb-6 mt-14 text-black text-3xl font-semibold font-play`}
-      >
-        {highlightText("Services Catalog", searchTerm)}
-      </p>
-      {/* <div className="flex p-4 flex-wrap justify-center"> */}
+        <p
+          id="services"
+          className={`text-center mb-6 mt-14 text-black text-3xl font-semibold font-play`}
+        >
+          Services Catalog
+        </p>
+        {/* <div className="flex p-4 flex-wrap justify-center"> */}
         <Carousel
           swipeable={true}
           draggable={true}
@@ -94,10 +119,10 @@ const Home = () => {
               >
                 <div className="my-2 w-8 h-8">{<service.image />}</div>
                 <p className="font-semibold font-play text-center my-2 text-lg text-darkBlue">
-                  {highlightText(service.title, searchTerm)}
+                  {service.title}
                 </p>
                 <p className="text-balance mb-2 text-sm text-textGray">
-                  {highlightText(service.desc, searchTerm)}
+                  {service.desc}
                 </p>
               </button>
             );
@@ -117,21 +142,22 @@ const Home = () => {
             Methodology
           </span>
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2  p-4">
+        <div ref={ref3} className="grid grid-cols-1 md:grid-cols-2  p-4">
           {approaches.map((item: any, index: number) => (
             <div
               key={index}
               className={`border-[1px] border-lightBlue p-4 m-2 flex flex-row justify-between items-center transition-opacity ease-in duration-700 ${
                 visible3 ? "opacity-100" : "opacity-0"
               }`}
-              ref={ref3}
             >
               <div className="mx-2">{<item.image />}</div>
               <div className="mx-2">
                 <p className="text-lg font-bold font-play text-neonBlue">
                   {item.title}
                 </p>
-                <p className="text-cream font-thin">{item.desc}</p>
+                <p className="text-cream font-thin">
+                  {item.desc}
+                </p>
               </div>
             </div>
           ))}
@@ -142,8 +168,11 @@ const Home = () => {
         id="achievements"
         className="text-center mb-12 mt-20 text-xl font-play"
       >
-        Solutions <br />{" "}
-        <span className="text-3xl font-semibold">in Action</span>
+        Solutions
+        <br />{" "}
+        <span className="text-3xl font-semibold">
+         in Action
+        </span>
       </p>
       <div
         ref={ref2}
@@ -160,7 +189,11 @@ const Home = () => {
               {/* Image Container */}
               <div className="flex-1 flex items-center justify-center mb-4 lg:mb-0 lg:mr-4">
                 {
-                  <item.image className="w-full h-full object-cover rounded-lg" />
+                  // <item.image className="w-full h-full object-cover rounded-lg" />
+                  <img
+                    src={item.image}
+                    className="w-[75vh] h-[55vh] object-cover rounded-lg"
+                  />
                 }
               </div>
 
@@ -180,7 +213,7 @@ const Home = () => {
       </div>
       {/* Ways of building great software */}
       <p className="text-center mb-12 mt-20 text-xl font-play">
-        Way of building <br />{" "}
+        Ways of building <br />{" "}
         <span className="text-3xl font-semibold">Great Software</span>
       </p>
       <div className="mt-20 mx-4 ">
@@ -197,14 +230,16 @@ const Home = () => {
               <p className="font-play font-bold text-2xl text-darkBlue mb-2">
                 {item.title}
               </p>
-              <p className="font-thin mb-6">{item.desc}</p>
+              <p className="font-thin mb-6">
+                {item.desc}
+              </p>
               <p className="border-l-4 border-darkPink px-2 italic text-darkPink font-thin">
                 {item.quote}
               </p>
               <div className="flex flex-row justify-start items-center my-6">
                 {<item.profileIcon />}
                 <div className="mx-2 font-thin">
-                  <p className="text-sm">{item.profileName}</p>
+                  {/* <p className="text-sm">{item.profileName}</p> */}
                   <p className="text-sm">{item.profileTitle}</p>
                 </div>
               </div>
@@ -217,7 +252,8 @@ const Home = () => {
       </div>
       {/* Our Techstack */}
       <p className="text-center mb-12 mt-20 text-xl font-play">
-        Our <br /> <span className="text-3xl font-semibold">Techstack</span>
+        Our
+        <br /> <span className="text-3xl font-semibold">Techstack</span>
       </p>
       <div
         ref={ref4}
@@ -253,6 +289,30 @@ const Home = () => {
           ))}
         </div>
       </div>
+      {showButton && (
+        <button
+          type="button"
+          onClick={backToTop}
+          className={` ${
+            showButton ? `inline-block` : `hidden`
+          } fixed bottom-[40px] right-[40px] p-3 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out`}
+        >
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            className="w-4 h-4"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+          >
+            <path
+              fill="currentColor"
+              d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"
+            ></path>
+          </svg>
+        </button>
+      )}
       <Footer />
     </div>
   );

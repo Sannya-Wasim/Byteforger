@@ -48,7 +48,7 @@ import QPayImage from './assets/images/QPay_Design.png'
 import DrivewaveImage from './assets/images/Drivewave_Design.jpg'
 
 export const links = [
-  { id: 1, text: "About Us", section : '/' },
+  { id: 1, text: "About Us", section : '/about' },
   { id: 2, text: "Services", section : '#services' },
   { id: 3, text: "Achievements", section : '#achievements' },
   { id: 4, text: "How it works", section : "#methodology" },

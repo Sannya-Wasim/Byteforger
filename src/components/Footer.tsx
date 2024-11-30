@@ -10,7 +10,7 @@ const icons = [Facebook, Instagram, Twitter, Linkedin];
 
 const Footer = () => {
   return (
-    <div id="contact" className="shadow-inner mt-36 p-4 md:p-6 lg:px-8">
+    <div id="contact" className="shadow-inner p-4 md:p-6 lg:px-8">
       <div className="flex flex-col lg:flex-row justify-start items-start lg:items-center lg:space-x-10 lg:space-y-0 space-y-6">
         {/* 1 */}
         <div className="lg:w-2/5 w-full px-4 md:px-6 lg:px-0">

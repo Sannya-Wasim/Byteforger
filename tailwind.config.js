@@ -17,7 +17,7 @@ module.exports = {
         lightPink : '#FFB1B1',
         cream : '#FDFFE2',
         textGray : '#4A5568',
-        lightGray : '#e5e7eb',
+        lightGray : '#e5e7eb', //C5D3E8
         neonPink : '#EA047E',
         neonBlue : '#2FA4FF'
       }

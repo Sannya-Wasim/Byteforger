@@ -280,7 +280,7 @@ const Home = () => {
             </button>
           ))}
         </div>
-        <div className="flex flex-wrap justify-center md:justify-evenly items-center my-8 md:my-16 space-y-4 md:space-y-0">
+        <div className="mb-36 flex flex-wrap justify-center md:justify-evenly items-center my-8 md:my-16 space-y-4 md:space-y-0">
           {stacks.map((StackIcon: any, index: number) => (
             <StackIcon
               key={index}

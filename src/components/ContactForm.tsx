@@ -115,7 +115,7 @@ const ContactForm = () => {
                     />
                     {errors.name && (
                       <span className="errorMessage text-red-500 text-sm">
-                        {errors.name.message}
+                        {typeof errors.name.message === 'string' && errors.name.message}
                       </span>
                     )}
                   </div>
@@ -160,7 +160,7 @@ const ContactForm = () => {
                     />
                     {errors.subject && (
                       <span className="errorMessage text-red-500 text-sm">
-                        {errors.subject.message}
+                        {typeof errors.subject.message === 'string' && errors.subject.message}
                       </span>
                     )}
                   </div>

@@ -53,7 +53,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="ContactForm bg-darkBlue mb-10">
+    <div className="ContactForm bg-darkBlue my-10">
       <div className="container mx-auto px-4 relative">
         {/* Alert Section */}
         {alertInfo.display && (

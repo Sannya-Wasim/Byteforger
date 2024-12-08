@@ -46,6 +46,11 @@ import { ReactComponent as SalesIcon } from "./assets/svgs/business.svg";
 import CleaningBeeImage from './assets/images/The Cleaning Bee-Profile_Image.jpg'
 import QPayImage from './assets/images/QPay_Design.png'
 import DrivewaveImage from './assets/images/Drivewave_Design.jpg'
+import { ReactComponent as TensorFlow } from "./assets/svgs/tensorflow-svgrepo-com.svg";
+import { ReactComponent as PyTorch } from "./assets/svgs/pytorch-svgrepo-com.svg";
+import { ReactComponent as Keras } from "./assets/svgs/keras-svgrepo-com.svg";
+import { ReactComponent as ScikitLearn } from "./assets/svgs/scikitlearn-svgrepo-com.svg";
+import { ReactComponent as OpenAI } from "./assets/svgs/openai-svgrepo-com.svg";
 
 export const links = [
   { id: 1, text: "About Us", section : '/about' },
@@ -151,7 +156,7 @@ export const approaches = [
 export const ways = [
   {
     title: "Build the right team to scale",
-    image: DummyImage01,
+    image: DummyImage02,
     desc: "Finding the right talent is not easy. We help you find the talent that suits your needs, follows your processes, and sticks with you long term (not the case with freelancers).",
     quote:
       '"Byteforger is quick to identify larger problems with the software, so we decided to expand our scope to build new modules."',
@@ -161,7 +166,7 @@ export const ways = [
   },
   {
     title: "Enhance Team Collaboration",
-    image: DummyImage03,
+    image: DummyImage01,
     desc: "Effective teamwork drives success. We foster strong collaboration through clear communication and alignment, making sure everyone is moving toward shared objectives seamlessly.",
     quote:
       '"Working with Byteforger improved our team’s collaboration, helping us achieve milestones faster and more cohesively."',
@@ -171,7 +176,7 @@ export const ways = [
   },
   {
     title: "Streamline Your Development Process",
-    image: DummyImage02,
+    image: DummyImage03,
     desc: "Optimizing processes is crucial for growth. We work alongside your team to ensure efficiency, scalability, and smooth operations that support both short-term and long-term goals.",
     quote:
       '"Byteforger helped us streamline our processes, resulting in faster delivery times and enhanced project management."',
@@ -188,4 +193,8 @@ export const icons = [
   { name: "Database", items: [Mongo, Sql, Postgres, Firebase] },
   { name: "Cloud Testing", items: [Aws, Google, Microsoft, Browser, Selenium] },
   { name: "DevOps", items: [Docker, Kubernetes, Jenkins, Github, Terraform] },
+  { 
+    name: "AI and Machine Learning", 
+    items: [ Keras, TensorFlow, ScikitLearn, PyTorch, OpenAI] 
+  },
 ];

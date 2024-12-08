@@ -233,16 +233,16 @@ const Home = () => {
               <p className="font-thin mb-6">
                 {item.desc}
               </p>
-              <p className="border-l-4 border-darkPink px-2 italic text-darkPink font-thin">
+              {/* <p className="border-l-4 border-darkPink px-2 italic text-darkPink font-thin">
                 {item.quote}
               </p>
               <div className="flex flex-row justify-start items-center my-6">
                 {<item.profileIcon />}
                 <div className="mx-2 font-thin">
-                  {/* <p className="text-sm">{item.profileName}</p> */}
+                  <p className="text-sm">{item.profileName}</p>
                   <p className="text-sm">{item.profileTitle}</p>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Image Section */}

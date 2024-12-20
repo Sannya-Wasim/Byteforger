@@ -18,13 +18,6 @@ const Footer = () => {
           <p className="text-textGray my-4 text-sm md:text-base">
           We help build and manage a team of world-class developers to bring your vision to life
           </p>
-          {/* <div className="flex flex-row justify-start items-center space-x-4">
-            {icons.map((Item, index) => (
-              <div key={index} className="p-3 shadow-xl rounded-full items-center bg-gray-100 hover:bg-darkBlue hover:text-white">
-                <Item className="w-4 h-4" />
-              </div>
-            ))}
-          </div> */}
         </div>
         {/* 2 */}
         <div className="flex flex-col justify-start items-start w-full md:w-1/2 lg:w-1/5">
@@ -45,11 +38,18 @@ const Footer = () => {
           {/* <p className="text-textGray my-4 text-sm md:text-base">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </p> */}
-          <p className="text-textGray text-sm md:text-base">+921234567890</p>
+          <p className="text-textGray text-sm md:text-base">info@bytegorger.com</p>
+          <div className="flex flex-row justify-start items-center space-x-4 mt-6">
+            {icons.map((Item, index) => (
+              <button key={index} className="p-2 shadow-md rounded-full items-center bg-gray-100 hover:bg-darkBlue hover:text-white">
+                <Item className="w-4 h-4" />
+              </button>
+            ))}
+          </div>
         </div>
       </div>
       <p className="text-center text-textGray text-xs md:text-sm p-4 mt-4">
-        © 2023 Copyright by IK Developers. All rights reserved.
+        © 2025 Copyright by Byteforger. All rights reserved.
       </p>
     </div>
   );

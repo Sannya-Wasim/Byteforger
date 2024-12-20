@@ -28,13 +28,13 @@ const Navbar = () => {
       {/* Desktop Navigation */}
       <div className="hidden md:flex md:flex-row items-center lg:text-xl md:text-md text-sm">
         {links.map((item) => (
-          <Link
+          <a
             key={item.id}
             className="text-center mx-4 text-black font-play hover:text-lightBlue"
-            to={`${item.section}`}
+            href={`${item.section}`}
           >
             {item.text}
-          </Link>
+          </a>
         ))}
         {/* <input
           value={searchTerm}

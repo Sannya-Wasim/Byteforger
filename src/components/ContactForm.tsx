@@ -86,7 +86,7 @@ const ContactForm = () => {
           >
             Contact Form
           </p>
-          <div className="col-12 text-center">
+          <div className="text-center mx-auto w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-2/5 p-4 sm:p-2">
             <div className="contactForm">
               <form
                 id="contact-form"
@@ -94,10 +94,10 @@ const ContactForm = () => {
                 noValidate
                 className="mt-5"
               >
-                {/* Row 1 of form */}
-                <div className="row formRow flex gap-2 mb-2">
+                {/* Row 1 of Form: Name */}
+                <div className="row formRow flex mb-4">
                   {/* Name Input */}
-                  <div className="col-5 w-full md:w-1/2">
+                  <div className="w-full">
                     <input
                       type="text"
                       {...register("name", {
@@ -115,13 +115,16 @@ const ContactForm = () => {
                     />
                     {errors.name && (
                       <span className="errorMessage text-red-500 text-sm">
-                        {typeof errors.name.message === 'string' && errors.name.message}
+                        {typeof errors.name.message === "string" &&
+                          errors.name.message}
                       </span>
                     )}
                   </div>
+                </div>
 
-                  {/* Email Input */}
-                  <div className="col-6 w-full md:w-1/2">
+                {/* Row 2 of Form: Email */}
+                <div className="row formRow mb-4">
+                  <div className="w-full">
                     <input
                       type="email"
                       {...register("email", {
@@ -140,35 +143,9 @@ const ContactForm = () => {
                   </div>
                 </div>
 
-                {/* Row 2 of form */}
-                <div className="row formRow mb-2">
-                  <div className="col w-full">
-                    <input
-                      type="text"
-                      {...register("subject", {
-                        required: {
-                          value: true,
-                          message: "Please enter a subject",
-                        },
-                        maxLength: {
-                          value: 75,
-                          message: "Subject cannot exceed 75 characters",
-                        },
-                      })}
-                      className="form-control formInput block w-full p-3 border rounded-md"
-                      placeholder="Subject"
-                    />
-                    {errors.subject && (
-                      <span className="errorMessage text-red-500 text-sm">
-                        {typeof errors.subject.message === 'string' && errors.subject.message}
-                      </span>
-                    )}
-                  </div>
-                </div>
-
-                {/* Row 3 of form */}
-                <div className="row formRow mb-2">
-                  <div className="col w-full">
+                {/* Row 3 of Form: Message */}
+                <div className="row formRow mb-4">
+                  <div className="w-full">
                     <textarea
                       rows={3}
                       {...register("message", {
@@ -184,8 +161,10 @@ const ContactForm = () => {
                     )}
                   </div>
                 </div>
+
+                {/* Submit Button */}
                 <button
-                  className="submit-btn btn bg-neonPink text-white font-semibold py-2 mb-10 px-8 rounded-lg hover:bg-lightBlue"
+                  className="submit-btn btn bg-neonPink text-white font-semibold py-2 px-8 mb-2 rounded-lg hover:bg-lightBlue"
                   disabled={disabled}
                   type="submit"
                 >

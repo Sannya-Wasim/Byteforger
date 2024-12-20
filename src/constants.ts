@@ -53,10 +53,10 @@ import { ReactComponent as ScikitLearn } from "./assets/svgs/scikitlearn-svgrepo
 import { ReactComponent as OpenAI } from "./assets/svgs/openai-svgrepo-com.svg";
 
 export const links = [
-  { id: 1, text: "About Us", section : '/about' },
-  { id: 2, text: "Services", section : '#services' },
-  { id: 3, text: "Achievements", section : '#achievements' },
-  { id: 4, text: "How it works", section : "#methodology" },
+  { id: 1, text: "About Us", section : '/#about' },
+  { id: 2, text: "Services", section : '/#services' },
+  { id: 3, text: "Achievements", section : '/#achievements' },
+  { id: 4, text: "How it works", section : "/#methodology" },
 ];
 
 export const services = [

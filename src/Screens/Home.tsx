@@ -77,6 +77,19 @@ const Home = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  useEffect(() => {
+    // Check for URL hash and scroll to the corresponding section
+    const hash = window.location.hash;
+    if (hash) {
+      const targetSection = document.querySelector(hash); // Find the section by ID
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: "smooth" }); // Scroll to the section
+      }
+    }
+  }, []);
+
+  
   return (
     <div className="">
       <Navbar />
@@ -203,9 +216,9 @@ const Home = () => {
                   {item.title}
                 </p>
                 <p className="text-textGray">{item.desc}</p>
-                <button className="bg-darkPink text-cream py-1 px-4 my-4 rounded-md hover:bg-lightPink transition duration-200 ease-in-out">
+                {/* <button className="bg-darkPink text-cream py-1 px-4 my-4 rounded-md hover:bg-lightPink transition duration-200 ease-in-out">
                   <p className="font-semibold">Read More</p>
-                </button>
+                </button> */}
               </div>
             </div>
           );

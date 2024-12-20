@@ -2,6 +2,7 @@ import React from "react";
 import { ReactComponent as HeroImage } from "../assets/svgs/heroImage.svg";
 import Lottie from "lottie-react";
 import HeroJSON from "../assets/json/Hero.json";
+import { Link } from "react-router";
 
 const Hero = () => {
   return (
@@ -15,9 +16,9 @@ const Hero = () => {
           We help build and manage a team of world-class developers to bring
           your vision to life
         </p>
-        <button className="border-2 border-darkBlue text-darkBlue font-play font-bold rounded-lg py-2 px-4 my-6 self-start hover:bg-darkBlue hover:text-cream">
+        <Link to='/contact' className="border-2 border-darkBlue text-darkBlue font-play font-bold rounded-lg py-2 px-4 my-6 self-start hover:bg-darkBlue hover:text-cream">
           Let's get started!
-        </button>
+        </Link >
       </div>
       <div className="hidden lg:block lg:-mt-10 lg:w-3/4 ">
         <Lottie animationData={HeroJSON} loop={true} className="" />

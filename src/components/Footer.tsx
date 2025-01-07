@@ -38,7 +38,7 @@ const Footer = () => {
           {/* <p className="text-textGray my-4 text-sm md:text-base">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </p> */}
-          <p className="text-textGray text-sm md:text-base">info@bytegorger.com</p>
+          <p className="text-textGray text-sm md:text-base">info@byteforger.com</p>
           <div className="flex flex-row justify-start items-center space-x-4 mt-6">
             {icons.map((Item, index) => (
               <button key={index} className="p-2 shadow-md rounded-full items-center bg-gray-100 hover:bg-darkBlue hover:text-white">

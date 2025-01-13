@@ -53,7 +53,7 @@ import { ReactComponent as ScikitLearn } from "./assets/svgs/scikitlearn-svgrepo
 import { ReactComponent as OpenAI } from "./assets/svgs/openai-svgrepo-com.svg";
 
 export const links = [
-  { id: 1, text: "About Us", section : '/#about' },
+  { id: 1, text: "About Us", section : '/about' },
   { id: 2, text: "Services", section : '/#services' },
   { id: 3, text: "How it works", section : "/#methodology" },
   { id: 4, text: "Achievements", section : '/#achievements' },
@@ -196,5 +196,38 @@ export const icons = [
   { 
     name: "AI and Machine Learning", 
     items: [ Keras, TensorFlow, ScikitLearn, PyTorch, OpenAI] 
+  },
+];
+
+export const about_services = [
+  {
+    title: "Frontend and Backend Development",
+    image: SoftwareIcon,
+    desc: "Building seamless and scalable digital experiences tailored to your needs.",
+  },
+  {
+    title: "Database Solutions",
+    image: WebIcon,
+    desc: "Designing, optimizing, and maintaining data systems for efficiency and reliability.",
+  },
+  {
+    title: "Cloud Services and DevOps",
+    image: CloudIcon,
+    desc: "Ensuring your applications are secure, scalable, and always accessible.",
+  },
+  {
+    title: "Machine Learning and AI",
+    image: GraphIcon,
+    desc: "Delivering intelligent solutions to enhance decision-making and automated processes.",
+  },
+  {
+    title: "Web and Mobile App Development",
+    image: DesignIcon,
+    desc: "Creating user-friendly applications that elevate your brand and engage your audience.",
+  },
+  {
+    title: "Software Testing",
+    image: TestingIcon,
+    desc: "Providing rigorous testing to ensure flawless performance across all platforms.",
   },
 ];
